@@ -1,7 +1,7 @@
 html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
   background-color: #0d0d0d;
   color: #fff;
   font-family: system-ui, sans-serif;
@@ -17,14 +17,12 @@ html, body {
 .fullscreen {
   display: flex;
   flex-direction: column;
-  justify-content: center;       /* Centra verticalmente */
-  align-items: center;           /* Centra horizontalmente */
+  justify-content: center;   /* centra verticalmente */
+  align-items: center;       /* centra horizontalmente */
+  height: 100%;              /* usa el 100% de alto del contenedor */
   width: 100%;
-  max-width: 1200px;
-  height: 100vh;                 /* <--- ¡esto es lo que te falta! */
   padding: 2rem;
   box-sizing: border-box;
-  margin: 0 auto;
 }
 
 .app {
@@ -111,6 +109,8 @@ html, body {
   border-radius: 8px;
   border: 1px solid #333;
   width: 100%;
+  max-height: 200px; /* 👈 Ajusta este valor si quieres más o menos espacio */
+  overflow-y: auto;   /* 👈 Esto activa el scroll interno */
 }
 
 .log h3 {
